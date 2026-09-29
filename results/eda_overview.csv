@@ -1,0 +1,3 @@
+dataset,cells,cycles_min,cycles_max,initial_Ah_min,initial_Ah_max,eol_rated_min,eol_rated_max,eol_initial_min,eol_initial_max,reach_eol
+CALCE,7,1274,2007,1.2691,1.3636,621,1000,653,1117,7
+NASA,4,132,168,1.8352,2.0191,60,94,62,125,4

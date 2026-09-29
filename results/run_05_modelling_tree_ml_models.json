@@ -1,0 +1,186 @@
+{
+  "notebook": "05_modelling_tree_ml_models",
+  "timestamp": "2026-09-30 00:06:50",
+  "environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.0",
+    "pandas": "3.0.3",
+    "scipy": "1.18.0",
+    "scikit-learn": "1.9.0",
+    "torch": "2.14.0",
+    "xgboost": "3.3.0",
+    "lightgbm": "4.7.0",
+    "shap": "not installed",
+    "matplotlib": "3.11.1"
+  },
+  "config": {
+    "quick_mode": false,
+    "data_dir": "D:\\AIO2026\\module_4_research\\rul_prediction_research\\data",
+    "study_groups": [
+      "nasa_core",
+      "calce_cc"
+    ],
+    "cell_groups": {
+      "nasa_core": [
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0018"
+      ],
+      "calce_cc": [
+        "CX2_16",
+        "CX2_31",
+        "CX2_33",
+        "CX2_34",
+        "CX2_35",
+        "CX2_36",
+        "CX2_37",
+        "CX2_38"
+      ],
+      "calce_varied": [
+        "CX2_3",
+        "CX2_4",
+        "CX2_8",
+        "CX2_32"
+      ]
+    },
+    "cleaning": {
+      "min_capacity_frac": 0.05,
+      "max_capacity_frac": 1.25,
+      "hampel_window": 9,
+      "hampel_n_mad": 4.0,
+      "smooth_window": 5,
+      "regen_jump_frac": 0.01
+    },
+    "labels": {
+      "eol_frac": 0.8,
+      "eol_persist": 5,
+      "initial_cycles": 5,
+      "primary_reference": "rated"
+    },
+    "windows": {
+      "NASA": {
+        "input_len": 16,
+        "horizon": 8,
+        "stride": 1,
+        "ma_kernel": 5
+      },
+      "CALCE": {
+        "input_len": 48,
+        "horizon": 16,
+        "stride": 1,
+        "ma_kernel": 13
+      }
+    },
+    "origin_fracs": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "rollout_cap_factor": 1.5,
+    "linear_train": {
+      "learning_rate": 0.005,
+      "batch_size": 256,
+      "max_epochs": 300,
+      "patience": 30,
+      "weight_decay": 0.0,
+      "val_frac": 0.2
+    },
+    "tree_params": {
+      "DecisionTree": {
+        "min_samples_leaf": 5
+      },
+      "RandomForest": {
+        "n_estimators": 300,
+        "min_samples_leaf": 2,
+        "max_features": 0.5
+      },
+      "AdaBoost": {
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "base_max_depth": 6
+      },
+      "GradientBoosting": {
+        "n_estimators": 150,
+        "learning_rate": 0.08,
+        "max_depth": 3,
+        "subsample": 0.8
+      },
+      "XGBoost": {
+        "n_estimators": 300,
+        "learning_rate": 0.05,
+        "max_depth": 4,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8
+      },
+      "LightGBM": {
+        "n_estimators": 300,
+        "learning_rate": 0.05,
+        "num_leaves": 15,
+        "min_child_samples": 10,
+        "subsample": 0.8,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.8
+      }
+    },
+    "linear_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "tree_seeds": [
+      0,
+      1,
+      2
+    ],
+    "deterministic_models": [
+      "DecisionTree",
+      "Persistence",
+      "LinearTrend"
+    ],
+    "range_arm_seeds": [
+      0
+    ],
+    "primary_metric": "rel_abs_rul_error",
+    "alpha_lambda": 0.2,
+    "alpha": 0.05,
+    "range_restrict_soh": 0.85,
+    "rq3_input_lens": {
+      "NASA": [
+        8,
+        12,
+        16,
+        24
+      ],
+      "CALCE": [
+        16,
+        32,
+        48,
+        64,
+        96
+      ]
+    },
+    "rq3_horizons": {
+      "NASA": [
+        4,
+        8,
+        12
+      ],
+      "CALCE": [
+        8,
+        16,
+        32
+      ]
+    },
+    "rq3_train_cells": [
+      1,
+      2,
+      3,
+      5,
+      7
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "hypothesis": "H1a",
+    "statement": "NLinear achieves lower relative RUL error than DLinear across all units.",
+    "test": "Wilcoxon signed-rank, DLinear vs NLinear",
+    "n_units": 32,
+    "effect": 0.031100478468899517,
+    "effect_label": "median(DLinear - NLinear) rel. error",
+    "p_value": 0.223978775087744,
+    "direction_as_predicted": true,
+    "p_holm": 0.447957550175488,
+    "verdict": "not detected",
+    "note": ""
+  },
+  {
+    "hypothesis": "H1b",
+    "statement": "NLinear's advantage over DLinear is larger in high-regeneration cells than in low-regeneration cells.",
+    "test": "Mann-Whitney U on paired differences, high vs low regeneration",
+    "n_units": 32,
+    "effect": -0.0011004784688994906,
+    "effect_label": "median diff (high) - median diff (low)",
+    "p_value": 0.9848463470368831,
+    "direction_as_predicted": false,
+    "p_holm": 0.9848463470368831,
+    "verdict": "not detected",
+    "note": "n_high = 14, n_low = 18"
+  }
+]

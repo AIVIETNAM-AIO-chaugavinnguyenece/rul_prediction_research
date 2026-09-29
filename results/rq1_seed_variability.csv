@@ -1,0 +1,4 @@
+model,median across units of seed SD
+DLinear,0.08585542750844881
+Linear,0.07959808913765021
+NLinear,0.048804042594269195

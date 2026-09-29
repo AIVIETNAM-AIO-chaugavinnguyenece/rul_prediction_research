@@ -1,0 +1,3 @@
+hypothesis,statement,test,n_units,effect,effect_label,p_value,direction_as_predicted,p_holm,verdict,note
+H1a,NLinear achieves lower relative RUL error than DLinear across all units.,"Wilcoxon signed-rank, DLinear vs NLinear",32,0.031100478468899517,median(DLinear - NLinear) rel. error,0.223978775087744,True,0.447957550175488,not detected,
+H1b,NLinear's advantage over DLinear is larger in high-regeneration cells than in low-regeneration cells.,"Mann-Whitney U on paired differences, high vs low regeneration",32,-0.0011004784688994906,median diff (high) - median diff (low),0.9848463470368831,False,0.9848463470368831,not detected,"n_high = 14, n_low = 18"
