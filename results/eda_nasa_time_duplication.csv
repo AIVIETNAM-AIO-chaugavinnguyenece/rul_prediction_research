@@ -1,0 +1,5 @@
+pair,n_a,n_b,identical_on_overlap
+B0005 vs B0006,168,168,True
+B0005 vs B0007,168,168,True
+B0006 vs B0007,168,168,True
+B0005 vs B0018,168,132,False

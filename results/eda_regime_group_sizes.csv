@@ -1,0 +1,5 @@
+dataset,regime,n_cells,n_test_units
+CALCE,high,3,9
+CALCE,low,4,12
+NASA,high,2,6
+NASA,low,2,6

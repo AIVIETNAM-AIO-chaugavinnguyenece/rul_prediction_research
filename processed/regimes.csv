@@ -1,0 +1,12 @@
+cell,dataset,regen_per_100_cycles,regime,dataset_median
+CX2_16,CALCE,8.321,high,2.87
+CX2_33,CALCE,4.088,high,2.87
+CX2_34,CALCE,2.49,low,2.87
+CX2_35,CALCE,2.494,low,2.87
+CX2_36,CALCE,4.08,high,2.87
+CX2_37,CALCE,1.256,low,2.87
+CX2_38,CALCE,2.87,low,2.87
+B0005,NASA,4.167,low,5.3575
+B0006,NASA,6.548,high,5.3575
+B0007,NASA,4.167,low,5.3575
+B0018,NASA,6.818,high,5.3575
